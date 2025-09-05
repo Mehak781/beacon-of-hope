@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       const targetId = link.getAttribute('href');
-      if (!targetId || !targetId.startsWith('#')) return; // non-anchor links pass through
+      if (!targetId || !targetId.startsWith('#')) return;
       const target = document.querySelector(targetId);
       if (!target) return;
       e.preventDefault();
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =========================
-   * Navbar background on scroll (dark theme)
+   * Navbar background on scroll
    * ========================= */
   const navbar = document.querySelector('.navbar');
   const setNavBg = () => {
@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrolled = window.pageYOffset || 0;
     const rate = scrolled * -0.5;
     const rate2 = scrolled * -0.3;
-
     if (heroContent) heroContent.style.transform = `translateY(${rate2}px)`;
     if (floatingElements) floatingElements.style.transform = `translateY(${rate}px)`;
     ticking = false;
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   /* =========================
-   * Animated counters (use .impact-number[data-target])
+   * Animated counters
    * ========================= */
   const animateCounter = (el, target) => {
     const duration = 1600; // ms
@@ -88,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.impact-number').forEach(el => counterObserver.observe(el));
 
   /* =========================
-   * Service card hover (optional sugar)
+   * Service card hover
    * ========================= */
   document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
@@ -102,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =========================
-   * Impact card reveal on scroll
+   * Impact card reveal
    * ========================= */
   const impactObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -121,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =========================
-   * Ripple on buttons
+   * Ripple effect on buttons
    * ========================= */
   const clickable = document.querySelectorAll('button, .btn, .btn-primary, .btn-secondary');
   clickable.forEach(btn => {
@@ -143,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =========================
-   * Floating particles (perf-friendly)
+   * Floating particles
    * ========================= */
   const createFloatingParticles = () => {
     const count = 16;
@@ -171,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   createFloatingParticles();
 
   /* =========================
-   * Simple section entrance
+   * Section entrance animation
    * ========================= */
   const sectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('animate-in'));
@@ -179,9 +178,28 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('section').forEach(s => sectionObserver.observe(s));
 
   /* =========================
-   * Mobile menu toggle (if present)
+   * Mobile menu toggle
    * ========================= */
   const menuBtn = document.getElementById('menuBtn');
   const menu = document.getElementById('menu');
   menuBtn?.addEventListener('click', () => menu?.classList.toggle('open'));
+
+  /* =========================
+   * Social/email icons
+   * ========================= */
+  const socialLinks = document.querySelectorAll('.social-icon');
+  socialLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      if (this.classList.contains('email')) {
+        e.preventDefault();
+        window.location.href = 'mailto:beaconofhjopeagsd@gmail.com';
+      }
+    });
+  });
+
+  /* =========================
+   * Footer year
+   * ========================= */
+  document.getElementById('year').textContent = new Date().getFullYear();
 });
+
