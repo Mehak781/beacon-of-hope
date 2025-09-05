@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://mehak781.github.io/beacon-of-hope/sitemap.xml
+Sitemap: https://mehak781.github.io/Beacon-of-Hope/sitemap.xml
+
