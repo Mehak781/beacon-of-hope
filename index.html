@@ -161,14 +161,15 @@
             </a>
           </div>
 
-          <!-- ✅ Gmail added here -->
           <p>Email: <a href="mailto:beaconofhjopeagsd@gmail.com">beaconofhjopeagsd@gmail.com</a></p>
         </div>
 
-        <form class="card" onsubmit="alert('Thanks! We will get back to you soon.'); return false;" aria-label="Quick message form">
-          <label>Name<br><input required></label><br><br>
-          <label>Email<br><input type="email" required></label><br><br>
-          <label>Message<br><textarea rows="4" required></textarea></label><br><br>
+        <!-- ✅ Netlify-ready form -->
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <label>Name<br><input type="text" name="name" required></label><br><br>
+          <label>Email<br><input type="email" name="email" required></label><br><br>
+          <label>Message<br><textarea name="message" rows="4" required></textarea></label><br><br>
           <button class="btn" type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
         </form>
       </div>
