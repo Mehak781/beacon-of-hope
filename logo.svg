@@ -1,0 +1,117 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for 3D effect -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#00ffff;stop-opacity:0.8" />
+      <stop offset="60%" style="stop-color:#4c1d95;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#1a0b3d;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <linearGradient id="handGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- Filters for glow effects -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="strongGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animation definitions -->
+    <animateTransform id="rotate" attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="20s" repeatCount="indefinite"/>
+    <animateTransform id="pulse" attributeName="transform" type="scale" values="1;1.1;1" dur="3s" repeatCount="indefinite"/>
+  </defs>
+  
+  <!-- Outer ring with 3D effect -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#ringGradient)" stroke-width="4" filter="url(#glow)" opacity="0.7">
+    <animateTransform attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Middle ring -->
+  <circle cx="200" cy="200" r="140" fill="none" stroke="url(#ringGradient)" stroke-width="3" filter="url(#glow)" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" values="360 200 200;0 200 200" dur="25s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Inner ring -->
+  <circle cx="200" cy="200" r="100" fill="none" stroke="url(#ringGradient)" stroke-width="2" filter="url(#glow)" opacity="0.3">
+    <animateTransform attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Left hand -->
+  <path d="M 80 250 Q 90 200 120 180 Q 140 160 160 170 Q 180 180 190 200 Q 195 220 185 240 Q 175 260 160 270 Q 140 280 120 275 Q 100 270 80 250 Z" 
+        fill="url(#handGradient)" filter="url(#glow)" opacity="0.9">
+    <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="4s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Right hand -->
+  <path d="M 320 250 Q 310 200 280 180 Q 260 160 240 170 Q 220 180 210 200 Q 205 220 215 240 Q 225 260 240 270 Q 260 280 280 275 Q 300 270 320 250 Z" 
+        fill="url(#handGradient)" filter="url(#glow)" opacity="0.9">
+    <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="4s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Central glowing orb -->
+  <circle cx="200" cy="200" r="60" fill="url(#centerGlow)" filter="url(#strongGlow)">
+    <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Central star/light burst -->
+  <g transform="translate(200,200)" filter="url(#strongGlow)">
+    <path d="M 0,-40 L 8,-8 L 40,0 L 8,8 L 0,40 L -8,8 L -40,0 L -8,-8 Z" fill="#ffffff" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="15s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Floating particles around the logo -->
+  <g opacity="0.6">
+    <circle cx="100" cy="100" r="2" fill="#ffffff" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;20,10;0,0" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="120" r="1.5" fill="#8b5cf6" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-15,20;0,0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="320" r="2.5" fill="#6366f1" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;25,-15;0,0" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="300" r="1" fill="#ffffff" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-20,-10;0,0" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.6;0.1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Text around the logo -->
+  <defs>
+    <path id="textCircle" d="M 200,200 m -160,0 a 160,160 0 1,1 320,0 a 160,160 0 1,1 -320,0"/>
+  </defs>
+  
+  <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" filter="url(#glow)">
+    <textPath href="#textCircle" startOffset="0%">
+      BEACON OF HOPE
+      <animate attributeName="startOffset" values="0%;100%;0%" dur="20s" repeatCount="indefinite"/>
+    </textPath>
+  </text>
+</svg>
