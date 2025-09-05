@@ -4,236 +4,188 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <!-- SEO -->
-  <title>Beacon of Hope 🌙✨ — Together, We Heal</title>
-  <meta name="description" content="Beacon of Hope brings awareness, support, and programs that light the way forward. Join us to make a real impact — together, we heal.">
-  <link rel="canonical" href="https://mehak781.github.io/Beacon-of-Hope/">
-  <meta name="theme-color" content="#0f1226">
+  <title>Beacon of Hope — Together, We Heal</title>
+  <meta name="description" content="Beacon of Hope is a student-led initiative supporting those facing cancer, Parkinson’s, Alzheimer’s and other chronic conditions through awareness, volunteering, and peer support." />
+  <meta name="theme-color" content="#0f1226" />
 
-  <!-- Social preview -->
+  <!-- Canonical & OG: use exact repo casing -->
+  <link rel="canonical" href="https://mehak781.github.io/Beacon-of-Hope/">
+  <meta property="og:url" content="https://mehak781.github.io/Beacon-of-Hope/">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Beacon of Hope — Together, We Heal">
   <meta property="og:description" content="Awareness, support, and programs that light the way forward.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mehak781.github.io/Beacon-of-Hope/">
-  <meta property="og:image" content="https://mehak781.github.io/Beacon-of-Hope/assets/cover.jpg">
+  <meta property="og:image" content="https://mehak781.github.io/Beacon-of-Hope/logo.svg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Your CSS -->
+  <!-- Site CSS -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Minimal inline styles (you can move to styles.css later) -->
-  <style>
-    :root{--bg:#0b0f24;--bg-2:#111635;--text:#e8ecff;--muted:#aab3ff;--brand:#7c8bff;--brand-2:#8ee2ff;--glass:rgba(255,255,255,.06);--shadow:0 10px 30px rgba(0,0,0,.35);--radius:18px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);
-      background: radial-gradient(1200px 600px at 10% -10%, #1a2049, transparent 60%),
-                  radial-gradient(1200px 600px at 110% 20%, #0d163a, transparent 55%), var(--bg);}
-    a{color:var(--brand);text-decoration:none}
-    .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem}
-
-    /* Nav */
-    .navbar{position:sticky;top:0;z-index:50;background:linear-gradient(to right, rgba(15,18,38,.7), rgba(15,18,38,.4));backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav-container{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-    .nav-logo{display:flex;gap:.6rem;align-items:center;font-weight:800}
-    .nav-menu{display:flex;gap:24px;list-style:none;margin:0;padding:0}
-    .nav-menu a{color:var(--text);opacity:.9}.nav-menu a:hover{opacity:1}
-    .mobile-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:1.25rem}
-    @media (max-width:840px){
-      .mobile-toggle{display:block}
-      .nav-menu{display:none;position:absolute;right:16px;top:64px;background:var(--bg-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);flex-direction:column;width:min(88vw,320px)}
-      .nav-menu.open{display:flex}
-    }
-
-    /* Hero */
-    .hero{position:relative;display:grid;place-items:center;min-height:78vh;text-align:center;overflow:hidden}
-    .hero .inner{max-width:860px;padding:84px 20px}
-    .sparkles{position:absolute;inset:0;pointer-events:none;background:
-      radial-gradient(2px 2px at 40% 30%, #fff6, transparent 60%),
-      radial-gradient(2px 2px at 70% 60%, #fff4, transparent 60%),
-      radial-gradient(2px 2px at 20% 80%, #fff2, transparent 60%);opacity:.4}
-    .logo{width:180px;height:auto;display:block;margin:0 auto 18px;filter:drop-shadow(0 12px 30px rgba(124,139,255,.35))}
-    h1{font-size:clamp(2rem,6vw,4rem);margin:10px 0 8px}
-    .sub{color:var(--muted);font-size:clamp(1rem,2.5vw,1.25rem)}
-    .ctas{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
-      background:linear-gradient(135deg,#7c8bff,#8ee2ff);color:#0b0f24;font-weight:700;box-shadow:var(--shadow)}
-    .btn.ghost{background:transparent;color:var(--text)}
-
-    /* Sections */
-    section{max-width:1080px;margin:0 auto;padding:70px 20px}
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:920px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
-    .muted{color:var(--muted)}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
-    .stat{background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px;text-align:center}
-    .stat b{display:block;font-size:1.6rem}
-    @media (max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}}
-    details{background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px}
-    summary{cursor:pointer;font-weight:600}
-    footer{border-top:1px solid rgba(255,255,255,.08);background:#0b0f24;padding:30px 20px;color:var(--muted);text-align:center}
-  </style>
 
   <!-- Structured data -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Beacon of Hope",
-   "url":"https://mehak781.github.io/Beacon-of-Hope/","logo":"https://mehak781.github.io/Beacon-of-Hope/logo.svg",
-   "sameAs":["https://facebook.com/","https://instagram.com/","https://twitter.com/"]}
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Beacon of Hope",
+    "url":"https://mehak781.github.io/Beacon-of-Hope/",
+    "logo":"https://mehak781.github.io/Beacon-of-Hope/logo.svg",
+    "sameAs":[
+      "https://www.instagram.com/beacon.of_.hope?igsh=YW1nZmtmdmgwc3Q%3D&utm_source=qr",
+      "https://www.linkedin.com/in/beacon-of-hope-3218b6380"
+    ]
+  }
   </script>
 </head>
-
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Nav -->
+  <!-- NAV -->
   <nav class="navbar" role="navigation" aria-label="Main">
     <div class="nav-container">
-      <div class="nav-logo"><span>Beacon of Hope</span><span aria-hidden="true">🌙✨</span></div>
+      <button class="brand" onclick="window.location.hash='#hero'">Beacon of Hope 🌙✨</button>
       <button class="mobile-toggle" aria-label="Open menu" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-menu" id="menu">
-        <li><a href="#hero">Home</a></li><li><a href="#about">About</a></li>
-        <li><a href="#mission">Mission</a></li><li><a href="#programs">Programs</a></li>
-        <li><a href="#impact">Impact</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO with Logo + Mission + CTAs -->
+  <!-- HERO -->
   <header id="hero" class="hero" role="banner">
     <div class="sparkles" aria-hidden="true"></div>
     <div class="inner">
-      <img class="logo" src="logo.svg" alt="Beacon of Hope logo">
+      <!-- Your actual file is logo.svg in repo root -->
+      <img class="logo" src="logo.svg" alt="Beacon of Hope logo" />
       <h1>Beacon of Hope</h1>
-      <p class="sub">Together, We Heal 🌙✨ <br>A community bringing awareness, support, and programs that light the way forward.</p>
+      <p class="sub">
+        Together, We Heal 🕊🤍<br>
+        A family of changemakers bringing awareness, support, and strength to those facing life-altering illnesses.
+      </p>
       <div class="ctas">
         <a class="btn" href="#about"><i class="fa-regular fa-circle-info"></i> About Us</a>
         <a class="btn ghost" href="#programs"><i class="fa-solid fa-hand-holding-heart"></i> Explore Programs</a>
       </div>
       <div class="stats" aria-label="Impact stats">
-        <div class="stat"><b>10k+</b><span class="muted">Lives reached</span></div>
-        <div class="stat"><b>150+</b><span class="muted">Volunteers</span></div>
-        <div class="stat"><b>40+</b><span class="muted">Events / year</span></div>
-        <div class="stat"><b>25</b><span class="muted">Active programs</span></div>
+        <div class="stat"><b>10k+</b><span>Lives reached</span></div>
+        <div class="stat"><b>150+</b><span>Volunteers</span></div>
+        <div class="stat"><b>40+</b><span>Events / year</span></div>
+        <div class="stat"><b>25</b><span>Active programs</span></div>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <div class="grid cols-2">
-        <div class="card"><h3>Who we are</h3><p class="muted">We are a community of volunteers, health professionals, and partners creating safe spaces, resources, and practical help for people on difficult journeys.</p></div>
-        <div class="card"><h3>What we do</h3><p class="muted">From awareness campaigns to peer support groups and emergency kits, our programs are designed to be accessible, local, and measurable.</p></div>
+        <article class="card">
+          <h3>Who we are</h3>
+          <p class="muted">Students, volunteers, and partners creating safe spaces, resources, and practical help for people on difficult journeys.</p>
+        </article>
+        <article class="card">
+          <h3>What we do</h3>
+          <p class="muted">From awareness drives and hospital volunteering to peer-support groups and learning resources, we make support accessible and local.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Mission -->
+    <!-- MISSION -->
     <section id="mission" aria-labelledby="mission-title">
       <h2 id="mission-title">Our Mission</h2>
       <div class="grid cols-3">
-        <div class="card"><i class="fa-solid fa-lightbulb"></i><h3>Awareness</h3><p class="muted">Clear, compassionate education that removes fear and builds action.</p></div>
-        <div class="card"><i class="fa-solid fa-people-group"></i><h3>Support</h3><p class="muted">Peer-led circles and 1:1 support with trained volunteers.</p></div>
-        <div class="card"><i class="fa-solid fa-seedling"></i><h3>Recovery</h3><p class="muted">Resources, referrals, and follow-ups that actually move people forward.</p></div>
+        <article class="card"><i class="fa-solid fa-lightbulb"></i><h3>Awareness</h3><p class="muted">Clear, compassionate education that removes fear and builds action.</p></article>
+        <article class="card"><i class="fa-solid fa-people-group"></i><h3>Support</h3><p class="muted">Peer-led circles and 1:1 support with trained volunteers.</p></article>
+        <article class="card"><i class="fa-solid fa-seedling"></i><h3>Recovery</h3><p class="muted">Referrals and follow-ups that help patients and families move forward.</p></article>
       </div>
     </section>
 
-    <!-- Programs -->
+    <!-- PROGRAMS -->
     <section id="programs" aria-labelledby="programs-title">
       <h2 id="programs-title">Programs</h2>
       <div class="grid cols-3">
-        <article class="card"><h3><i class="fa-solid fa-bullhorn"></i> Awareness Campaigns</h3><p class="muted">Monthly campaigns with easy shareable toolkits.</p><a class="btn ghost" href="#contact">Partner with us</a></article>
-        <article class="card"><h3><i class="fa-solid fa-hands-holding-child"></i> Support Groups</h3><p class="muted">Weekly circles moderated by trained volunteers.</p><a class="btn ghost" href="#contact">Join a circle</a></article>
-        <article class="card"><h3><i class="fa-solid fa-book-heart"></i> Learning Hub</h3><p class="muted">Guides, checklists, and short videos for any stage.</p><a class="btn ghost" href="#contact">Get resources</a></article>
+        <article class="card">
+          <h3><i class="fa-solid fa-bullhorn"></i> Awareness Campaigns</h3>
+          <p class="muted">Monthly drives with shareable toolkits for schools, clinics, and neighborhoods.</p>
+          <a class="btn ghost" href="#contact">Partner with us</a>
+        </article>
+        <article class="card">
+          <h3><i class="fa-solid fa-hands-holding-child"></i> Support Groups</h3>
+          <p class="muted">Weekly circles moderated by trained volunteers—open, safe, and free.</p>
+          <a class="btn ghost" href="#contact">Join a circle</a>
+        </article>
+        <article class="card">
+          <h3><i class="fa-solid fa-book-heart"></i> Learning Hub</h3>
+          <p class="muted">Guides, checklists, and short videos for any stage of the journey.</p>
+          <a class="btn ghost" href="#contact">Get resources</a>
+        </article>
       </div>
     </section>
 
-    <!-- Impact -->
+    <!-- IMPACT -->
     <section id="impact" aria-labelledby="impact-title">
       <h2 id="impact-title">Impact</h2>
       <div class="grid cols-2">
-        <div class="card">
+        <article class="card">
           <h3>Real stories</h3>
-          <blockquote class="card"><i class="fa-solid fa-quote-left"></i> Your workshops helped me feel seen and guided. — <b>Aisha</b></blockquote>
-          <blockquote class="card"><i class="fa-solid fa-quote-left"></i> The support group changed my week. I’m not alone anymore. — <b>Rahul</b></blockquote>
-        </div>
-        <div class="card">
+          <blockquote class="quote">“Your workshops helped me feel seen and guided.” — <b>Aisha</b></blockquote>
+          <blockquote class="quote">“The support group changed my week. I’m not alone anymore.” — <b>Rahul</b></blockquote>
+        </article>
+        <article class="card">
           <h3>How we measure</h3>
-          <p class="muted">Attendance, follow-up outcomes, and referrals are tracked monthly. We publish a transparent summary each quarter.</p>
-          <a class="btn ghost" href="#contact"><i class="fa-regular fa-file-lines"></i> Request the latest report</a>
+          <p class="muted">Attendance, outcomes, and referrals tracked monthly. We publish a transparent summary each quarter.</p>
+          <a class="btn ghost" href="#contact"><i class="fa-regular fa-file-lines"></i> Request latest report</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact Us</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p class="muted">Have a question, idea, or want to partner? We’d love to hear from you.</p>
+
+          <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+
+          <div class="socials">
+            <a aria-label="Instagram" target="_blank" rel="noopener"
+               href="https://www.instagram.com/beacon.of_.hope?igsh=YW1nZmtmdmgwc3Q%3D&utm_source=qr">
+              <i class="fab fa-instagram"></i> <span>instagram.com/beacon.of_.hope</span>
+            </a>
+            <a aria-label="LinkedIn" target="_blank" rel="noopener"
+               href="https://www.linkedin.com/in/beacon-of-hope-3218b6380">
+              <i class="fab fa-linkedin"></i> <span>linkedin.com/in/beacon-of-hope-3218b6380</span>
+            </a>
+          </div>
+
+          <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
         </div>
+
+        <form class="card" onsubmit="alert('Thanks! We will get back to you soon.'); return false;" aria-label="Quick message form">
+          <label>Name<br><input required></label><br><br>
+          <label>Email<br><input type="email" required></label><br><br>
+          <label>Message<br><textarea rows="4" required></textarea></label><br><br>
+          <button class="btn" type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
+        </form>
       </div>
     </section>
+  </main>
 
-    <!-- FAQ -->
-    <section aria-labelledby="faq-title">
-      <h2 id="faq-title">FAQ</h2>
-      <div class="grid">
-        <details open><summary>How can I volunteer?</summary><p class="muted">Send a message via the contact form. We run monthly onboarding with quick training.</p></details>
-        <details><summary>Is there a cost to join programs?</summary><p class="muted">No. All core programs are free, thanks to donations and partners.</p></details>
-        <details><summary>Do you work with schools or clinics?</summary><p class="muted">Yes! We partner for awareness days, kits, and referral pathways.</p></details>
-      </div>
-    </section>
+  <footer><p>© <span id="year"></span> Beacon of Hope — Together, We Heal.</p></footer>
 
-    <!-- Contact -->
-<!-- ✉️ Contact -->
-<section id="contact" aria-labelledby="contact-title">
-  <h2 id="contact-title">Contact Us</h2>
-  <div class="grid cols-2">
-    <div class="card">
-      <p class="muted">Have a question, idea, or want to partner? We’d love to hear from you.</p>
-
-      <!-- ✅ Phone number (click-to-call) -->
-      <p>Phone: <a href="tel:+916280866903">+91 62808 66903</a></p>
-
-      <!-- ✅ Social links -->
-      <div class="socials" style="display:flex; flex-direction:column; gap:10px; margin-top:14px; font-size:1.05rem">
-
-        <a aria-label="Instagram" href="https://www.instagram.com/beacon.of_.hope?igsh=YW1nZmtmdmgwc3Q%3D&utm_source=qr" target="_blank" rel="noopener">
-          <i class="fab fa-instagram"></i>
-          <span style="margin-left:6px">instagram.com/beacon.of_.hope</span>
-        </a>
-
-        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/beacon-of-hope-3218b6380" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin"></i>
-          <span style="margin-left:6px">linkedin.com/in/beacon-of-hope-3218b6380</span>
-        </a>
-      </div>
-
-      <!-- (Optional) Email -->
-      <p style="margin-top:14px">
-        Email: <a href="beaconofhopeagsd@gmail.com">beaconofhopeagsd.com</a>
-      </p>
-    </div>
-
-    <form class="card" onsubmit="alert('Thanks! We will get back to you soon.'); return false;" aria-label="Quick message form">
-      <label>Name<br><input required style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)"></label><br><br>
-      <label>Email<br><input type="email" required style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)"></label><br><br>
-      <label>Message<br><textarea required rows="4" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)"></textarea></label><br><br>
-      <button class="btn" type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
-    </form>
-  </div>
-</section>
-
-
-
-
-  <!-- Small JS -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const menuBtn = document.getElementById('menuBtn'), menu = document.getElementById('menu');
-    menuBtn?.addEventListener('click', () => menu.classList.toggle('open'));
-    const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transform='translateY(0)';e.target.style.opacity='1';}}),{threshold:.12});
-    document.querySelectorAll('section .card, .stat, blockquote.card').forEach(el=>{el.style.transform='translateY(14px)';el.style.opacity='0';el.style.transition='all .6s ease';io.observe(el);});
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
