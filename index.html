@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <!-- ✅ Title + SEO -->
+  <!-- ✅ SEO -->
   <title>Beacon of Hope 🌙✨ — Together, We Heal</title>
   <meta name="description" content="Beacon of Hope brings awareness, support, and programs that light the way forward. Join us to make a real impact — together, we heal." />
   <link rel="canonical" href="https://mehak781.github.io/beacon-of-hope/" />
@@ -19,63 +16,59 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mehak781.github.io/beacon-of-hope/" />
   <meta property="og:image" content="https://mehak781.github.io/beacon-of-hope/assets/cover.jpg" />
-
-  <!-- (Optional) Twitter card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Beacon of Hope — Together, We Heal" />
-  <meta name="twitter:description" content="Awareness, support, and programs that light the way forward." />
 
-  <!-- ✅ Fonts & Icons -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Your site CSS (keep) -->
+  <!-- Your site CSS (keep if you have it) -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- ✨ Minimal inline styles so this file looks great immediately. Move these into styles.css later. -->
+  <!-- ✨ Minimal inline styles (you can move to styles.css later) -->
   <style>
     :root{
       --bg:#0b0f24; --bg-2:#111635; --card:#161b3d; --text:#e8ecff; --muted:#aab3ff;
-      --brand:#7c8bff; --brand-2:#8ee2ff; --accent:#ffd166;
-      --glass:rgba(255,255,255,.06);
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:18px;
+      --brand:#7c8bff; --brand-2:#8ee2ff; --accent:#ffd166; --glass:rgba(255,255,255,.06);
+      --shadow:0 10px 30px rgba(0,0,0,.35); --radius:18px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text); background: radial-gradient(1200px 600px at 10% -10%, #1a2049, transparent 60%), radial-gradient(1200px 600px at 110% 20%, #0d163a, transparent 55%), var(--bg);
-    }
-    a{color:var(--brand); text-decoration:none}
-    .skip{position:absolute;left:-9999px}
-    .skip:focus{left:12px;top:12px;background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2049, transparent 60%),
+                  radial-gradient(1200px 600px at 110% 20%, #0d163a, transparent 55%), var(--bg);}
+    a{color:var(--brand);text-decoration:none}
+    .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem}
 
     /* NAV */
-    .navbar{position:sticky;top:0;z-index:50;background:linear-gradient( to right, rgba(15,18,38,.7), rgba(15,18,38,.4)); backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{position:sticky;top:0;z-index:50;background:linear-gradient(to right, rgba(15,18,38,.7), rgba(15,18,38,.4));
+      backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
     .nav-container{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-    .nav-logo{display:flex;gap:.5rem;align-items:center;font-weight:800;letter-spacing:.4px}
-    .logo-icon{filter:drop-shadow(0 4px 10px rgba(255,255,255,.12))}
+    .nav-logo{display:flex;gap:.6rem;align-items:center;font-weight:800;letter-spacing:.4px}
     .nav-menu{display:flex;gap:24px;list-style:none;margin:0;padding:0}
-    .nav-menu a{color:var(--text);opacity:.9}
-    .nav-menu a:hover{opacity:1}
+    .nav-menu a{color:var(--text);opacity:.9}.nav-menu a:hover{opacity:1}
     .mobile-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:1.25rem}
     @media (max-width:840px){
       .mobile-toggle{display:block}
-      .nav-menu{display:none;position:absolute;right:16px;top:64px;background:var(--bg-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);flex-direction:column;width:min(88vw,320px)}
+      .nav-menu{display:none;position:absolute;right:16px;top:64px;background:var(--bg-2);border:1px solid rgba(255,255,255,.08);
+        border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);flex-direction:column;width:min(88vw,320px)}
       .nav-menu.open{display:flex}
     }
 
     /* HERO */
     .hero{position:relative;display:grid;place-items:center;min-height:78vh;text-align:center;overflow:hidden}
-    .hero .inner{max-width:820px;padding:80px 20px}
-    .tag{display:inline-flex;gap:.5rem;align-items:center;padding:6px 12px;border-radius:999px;background:var(--glass);border:1px solid rgba(255,255,255,.08);font-size:.85rem;color:var(--muted)}
-    h1{font-size: clamp(2rem, 6vw, 4rem); margin:16px 0 10px; letter-spacing:.2px}
-    .sub{color:var(--muted);font-size: clamp(1rem, 2.6vw, 1.25rem)}
+    .hero .inner{max-width:860px;padding:84px 20px}
+    .sparkles{position:absolute;inset:0;pointer-events:none;background:
+      radial-gradient(2px 2px at 40% 30%, #fff6, transparent 60%),
+      radial-gradient(2px 2px at 70% 60%, #fff4, transparent 60%),
+      radial-gradient(2px 2px at 20% 80%, #fff2, transparent 60%);opacity:.4}
+    .logo{width:120px;height:auto;margin:0 auto 18px;filter:drop-shadow(0 12px 30px rgba(124,139,255,.35))}
+    h1{font-size:clamp(2rem,6vw,4rem);margin:10px 0 8px}
+    .sub{color:var(--muted);font-size:clamp(1rem,2.5vw,1.25rem)}
     .ctas{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg, var(--brand), var(--brand-2));color:#0b0f24;font-weight:700;box-shadow:var(--shadow)}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b0f24;font-weight:700;box-shadow:var(--shadow)}
     .btn.ghost{background:transparent;color:var(--text)}
-    .sparkles{position:absolute;inset:0;pointer-events:none;background:radial-gradient(2px 2px at 40% 30%, #fff6, transparent 60%), radial-gradient(2px 2px at 70% 60%, #fff4, transparent 60%), radial-gradient(2px 2px at 20% 80%, #fff2, transparent 60%);opacity:.4}
 
     /* SECTIONS */
     section{max-width:1080px;margin:0 auto;padding:70px 20px}
@@ -83,7 +76,8 @@
     .grid.cols-3{grid-template-columns:repeat(3,1fr)}
     .grid.cols-2{grid-template-columns:repeat(2,1fr)}
     @media (max-width:920px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
     .card h3{margin:.25rem 0 .35rem}
     .muted{color:var(--muted)}
 
@@ -93,20 +87,13 @@
     .stat b{display:block;font-size:1.6rem}
     @media (max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}}
 
-    /* TESTIMONIALS */
-    .testi{display:grid;gap:14px}
-    .quote{background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
-    .quote i{color:var(--accent)}
-
-    /* FAQ */
+    /* FAQ & Footer */
     details{background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px}
     summary{cursor:pointer;font-weight:600}
-
-    /* FOOTER */
     footer{border-top:1px solid rgba(255,255,255,.08);background:#0b0f24;padding:30px 20px;color:var(--muted);text-align:center}
   </style>
 
-  <!-- ✅ Structured data for Google -->
+  <!-- ✅ Structured data (Google) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -114,11 +101,7 @@
     "name":"Beacon of Hope",
     "url":"https://mehak781.github.io/beacon-of-hope/",
     "logo":"https://mehak781.github.io/beacon-of-hope/logo.svg",
-    "sameAs":[
-      "https://facebook.com/",
-      "https://instagram.com/",
-      "https://twitter.com/"
-    ]
+    "sameAs":["https://facebook.com/","https://instagram.com/","https://twitter.com/"]
   }
   </script>
 </head>
@@ -130,7 +113,7 @@
   <nav class="navbar" role="navigation" aria-label="Main">
     <div class="nav-container">
       <div class="nav-logo" aria-label="Home">
-        <span class="logo-text">Beacon of Hope</span><span class="logo-icon">🌙✨</span>
+        <span class="logo-text">Beacon of Hope</span><span aria-hidden="true">🌙✨</span>
       </div>
       <button class="mobile-toggle" aria-label="Open menu" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-menu" id="menu">
@@ -144,16 +127,23 @@
     </div>
   </nav>
 
-  <!-- 🌟 Hero -->
+  <!-- 🌟 HERO with Logo + Mission + CTAs -->
   <header id="hero" class="hero" role="banner">
     <div class="sparkles" aria-hidden="true"></div>
     <div class="inner">
-      <span class="tag"><i class="fa-regular fa-star"></i> Community-led support</span>
+      <!-- ✅ Show your logo here -->
+      <!-- If your file is logo.png, change src to 'logo.png' -->
+      <img class="logo" src="logo.svg" alt="Beacon of Hope logo" />
+
       <h1>Beacon of Hope</h1>
-      <p class="sub">Together, We Heal — awareness, support, and programs that light the way forward.</p>
+      <p class="sub">
+        Together, We Heal 🌙✨ <br />
+        A community bringing awareness, support, and programs that light the way forward.
+      </p>
+
       <div class="ctas">
-        <a class="btn" href="#programs"><i class="fa-solid fa-hand-holding-heart"></i> Get Involved</a>
-        <a class="btn ghost" href="#about"><i class="fa-regular fa-circle-play"></i> Learn More</a>
+        <a class="btn" href="#about"><i class="fa-regular fa-circle-info"></i> About Us</a>
+        <a class="btn ghost" href="#programs"><i class="fa-solid fa-hand-holding-heart"></i> Explore Programs</a>
       </div>
 
       <!-- quick stats -->
@@ -173,15 +163,11 @@
       <div class="grid cols-2">
         <div class="card">
           <h3>Who we are</h3>
-          <p class="muted">
-            We are a community of volunteers, health professionals, and partners creating safe spaces, resources, and practical help for people on difficult journeys.
-          </p>
+          <p class="muted">We are a community of volunteers, health professionals, and partners creating safe spaces, resources, and practical help for people on difficult journeys.</p>
         </div>
         <div class="card">
           <h3>What we do</h3>
-          <p class="muted">
-            From awareness campaigns to peer support groups and emergency kits, our programs are designed to be accessible, local, and measurable.
-          </p>
+          <p class="muted">From awareness campaigns to peer support groups and emergency kits, our programs are designed to be accessible, local, and measurable.</p>
         </div>
       </div>
     </section>
@@ -236,10 +222,8 @@
       <div class="grid cols-2">
         <div class="card">
           <h3>Real stories</h3>
-          <div class="testi">
-            <blockquote class="quote"><i class="fa-solid fa-quote-left"></i> Your workshops helped me feel seen and guided. — <b>Aisha</b></blockquote>
-            <blockquote class="quote"><i class="fa-solid fa-quote-left"></i> The support group changed my week. I’m not alone anymore. — <b>Rahul</b></blockquote>
-          </div>
+          <blockquote class="card"><i class="fa-solid fa-quote-left"></i> Your workshops helped me feel seen and guided. — <b>Aisha</b></blockquote>
+          <blockquote class="card"><i class="fa-solid fa-quote-left"></i> The support group changed my week. I’m not alone anymore. — <b>Rahul</b></blockquote>
         </div>
         <div class="card">
           <h3>How we measure</h3>
@@ -249,22 +233,13 @@
       </div>
     </section>
 
-    <!-- ❓ FAQ (no JS needed) -->
+    <!-- ❓ FAQ -->
     <section aria-labelledby="faq-title">
       <h2 id="faq-title">FAQ</h2>
       <div class="grid">
-        <details open>
-          <summary>How can I volunteer?</summary>
-          <p class="muted">Send a message via the contact form. We run monthly onboarding with quick training.</p>
-        </details>
-        <details>
-          <summary>Is there a cost to join programs?</summary>
-          <p class="muted">No. All core programs are free, thanks to donations and partners.</p>
-        </details>
-        <details>
-          <summary>Do you work with schools or clinics?</summary>
-          <p class="muted">Yes! We partner for awareness days, kits, and referral pathways.</p>
-        </details>
+        <details open><summary>How can I volunteer?</summary><p class="muted">Send a message via the contact form. We run monthly onboarding with quick training.</p></details>
+        <details><summary>Is there a cost to join programs?</summary><p class="muted">No. All core programs are free, thanks to donations and partners.</p></details>
+        <details><summary>Do you work with schools or clinics?</summary><p class="muted">Yes! We partner for awareness days, kits, and referral pathways.</p></details>
       </div>
     </section>
 
@@ -276,16 +251,16 @@
           <p class="muted">Have a question, idea, or want to partner? We’d love to hear from you.</p>
           <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
           <p>Phone: <a href="tel:+911234567890">+91 12345 67890</a></p>
-          <div class="socials" style="display:flex; gap:12px; margin-top:10px">
+          <div style="display:flex; gap:12px; margin-top:10px">
             <a aria-label="Facebook" href="#"><i class="fab fa-facebook"></i></a>
-            <a aria-label="Twitter" href="#"><i class="fab fa-x-twitter"></i></a>
+            <a aria-label="Twitter/X" href="#"><i class="fab fa-x-twitter"></i></a>
             <a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
             <a aria-label="YouTube" href="#"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <form class="card" onsubmit="alert('Thanks! We will get back to you soon.'); return false;" aria-label="Quick message form">
-          <label>Name<br><input required style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)" /></label><br><br>
-          <label>Email<br><input type="email" required style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)" /></label><br><br>
+          <label>Name<br><input required style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)"></label><br><br>
+          <label>Email<br><input type="email" required style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)"></label><br><br>
           <label>Message<br><textarea required rows="4" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f1226;color:var(--text)"></textarea></label><br><br>
           <button class="btn" type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
         </form>
@@ -297,7 +272,7 @@
     <p>© <span id="year"></span> Beacon of Hope — Together, We Heal.</p>
   </footer>
 
-  <!-- ⚡ Small enhancements -->
+  <!-- ⚡ Enhancements -->
   <script>
     // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
@@ -307,18 +282,19 @@
     // Auto year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Reveal on scroll (simple fade-in)
+    // Simple reveal-on-scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if(e.isIntersecting){ e.target.style.transform='translateY(0)'; e.target.style.opacity='1'; }
+        if (e.isIntersecting) { e.target.style.transform='translateY(0)'; e.target.style.opacity='1'; }
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('section .card, .stat, .quote').forEach(el=>{
-      el.style.transform='translateY(14px)'; el.style.opacity='.0'; el.style.transition='all .6s ease';
+    document.querySelectorAll('section .card, .stat, blockquote.card').forEach(el=>{
+      el.style.transform='translateY(14px)'; el.style.opacity='0'; el.style.transition='all .6s ease';
       observer.observe(el);
     });
   </script>
 </body>
 </html>
+
 
